@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio Effects</title>
+  </head>
+  <body>
+
+    <!-- FILE -->
+
+    <div>
+      <h2>File</h2>
+      <p>Supports 44.1 kHz WAVE-files</p>
+      <div id="holder" style="border: 2px dotted black; padding: 10px; margin: 10px;">
+        Drag your file here
+      </div>
+      <p id="file-info"></p>
+      <button type="button" id="run-button">Run</button>
+    </div>
+
+    <!-- VISUALIZATION -->
+
+    <div>
+      <h2>Visualization</h2>
+      <form>
+        Width (# of samples to be visualized)<br>
+        <input type="number" name="width" id="width-input" value="1000"><br>
+        Height<br>
+        <input type="number" name="height" id="height-input" value="1000">
+      </form>
+    </div>
+
+    <!-- GAIN -->
+
+    <div>
+      <h2>Gain</h2>
+      <form>
+        Amount (no effect = 1, increase = 0..1, decrease = 1..n)<br>
+        <input type="number" name="gain" id="gain-input" value="1" min="0"><br>
+      </form>
+    </div>
+
+    <!-- LPF -->
+
+    <div>
+      <h2>LPF</h2>
+      <form>
+        Threshold (Hz)<br>
+        <input type="number" name="threshold" id="LPF-threshold" value="440"><br>
+        Buffer<br>
+        <input type="number" name="buffer" id="LPF-buffer" value="1000"><br>
+      </form>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+  <script>
+    require('./renderer.js')
+  </script>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "node-lpf",
+  "version": "1.0.0",
+  "description": "A (non-real-time) low pass filter and waveform visualizer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+  ],
+  "author": "Pyry Mäkinen",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  },
+  "dependencies": {
+    "node-png": "^0.4.3",
+    "node-wav": "0.0.2"
+  }
+}
